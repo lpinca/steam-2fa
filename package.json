@@ -1,6 +1,6 @@
 {
   "name": "steam-2fa",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "CLI utility to enable and disable 2FA on a Steam account",
   "homepage": "https://github.com/lpinca/steam-2fa",
   "bugs": "https://github.com/lpinca/steam-2fa/issues",
