@@ -42,10 +42,10 @@ community.login({
     'accountName': program.accountName,
     'password': program.password
   }, function logon(err) {
-    if (err) return fatalError('failed to log in to steamcommunity');
+    if (err) return fatalError('Failed to log in to steamcommunity');
 
     community.disableTwoFactor(program.revocationCode, function disable(err) {
-      if (err) fatalError('failed to disable 2FA');
+      if (err) fatalError('Failed to disable 2FA');
     });
   });
 });

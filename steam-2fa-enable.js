@@ -33,7 +33,7 @@ if (!program.accountName || !program.password) program.help();
     if (!err) {
       return community.enableTwoFactor(function enable(err, res) {
         if (err || res.status !== 1) {
-          fatalError('failed to enable 2FA');
+          fatalError('Failed to enable 2FA');
           return rl.close();
         }
 
@@ -48,7 +48,7 @@ if (!program.accountName || !program.password) program.help();
         try {
           fs.writeFileSync(file, JSON.stringify(res, null, '  '));
         } catch (e) {
-          fatalError('failed to enable 2FA, could not write output file' );
+          fatalError('Failed to enable 2FA, could not write output file' );
           return rl.close();
         }
 
@@ -56,7 +56,7 @@ if (!program.accountName || !program.password) program.help();
           community.finalizeTwoFactor(res.shared_secret, code, function done(err) {
             if (err) {
               fs.unlinkSync(file);
-              fatalError('failed to enable 2FA');
+              fatalError('Failed to enable 2FA');
             }
           });
           rl.close();
@@ -76,7 +76,7 @@ if (!program.accountName || !program.password) program.help();
       || message !== 'SteamGuard'
       && message !== 'CAPTCHA'
     ) {
-      fatalError('failed to log in to steamcommunity');
+      fatalError('Failed to log in to steamcommunity');
       return rl.close();
     }
 
