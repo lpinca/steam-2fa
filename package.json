@@ -4,14 +4,11 @@
   "description": "CLI utility to enable and disable 2FA on a Steam account",
   "homepage": "https://github.com/lpinca/steam-2fa",
   "bugs": "https://github.com/lpinca/steam-2fa/issues",
-  "repository": "lpinca/stream-2fa",
+  "repository": "lpinca/steam-2fa",
   "author": "Luigi Pinca",
   "license": "MIT",
   "bin": {
     "steam-2fa": "steam-2fa.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
     "steam-2fa-disable.js",
